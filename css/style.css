@@ -17,6 +17,7 @@ html {
   font-family: JosefinSans;
   font-size: 10px;
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,33 +28,6 @@ body {
 a {
   text-decoration: none;
   color: black;
-  font-size: 2rem;
-  position: relative;
-  height: 48px;
-  padding: 0 2rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: black;
-}
-
-a:before {
-  content: '';
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  top: -75%;
-  left: 0;
-  border-radius: 50%;
-  opacity: 0.5;
-  background-color: #3D5AF1;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-a:hover:before {
-  width: 100%;
-  border-radius: 24px;
 }
 
 button {
@@ -64,12 +38,13 @@ button {
   background: #3D5AF1;
   border: none;
   color: white;
-  padding: 0 3rem;
+  padding: 1.5rem 3rem;
   font-weight: bold;
   border-radius: 4px;
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  font-family: JosefinSans;
 }
 
 ul {
@@ -80,10 +55,22 @@ p {
   max-width: 500px;
 }
 
+.break {
+  height: 72px;
+}
+
 header {
   z-index: 999;
-  padding: 2rem 1rem;
-  width: calc(100% - 2.4rem);
+  width: 100%;
+  position: fixed;
+  background-color: white;
+}
+
+header .nav {
+  height: 64px;
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,14 +80,11 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: absolute;
-  color: white;
 }
 
-header a.logo {
+header .nav a.logo {
   font-weight: bold;
   font-size: 1.4rem;
-  color: white;
 }
 
 header .nav__links {
@@ -111,8 +95,8 @@ header .nav__links {
 
 header .nav__link {
   padding: 1rem;
-  font-size: 1rem;
-  color: white;
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
 section {
@@ -761,6 +745,33 @@ footer div {
 
 .card-body a {
   margin-top: 2rem;
+  font-size: 2rem;
+  position: relative;
+  height: 48px;
+  padding: 0 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: black;
+}
+
+.card-body a:before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: -75%;
+  left: 0;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: #3D5AF1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.card-body a:hover:before {
+  width: 100%;
+  border-radius: 24px;
 }
 
 @media screen and (max-width: 375px) {
@@ -776,6 +787,9 @@ footer div {
 }
 
 @media screen and (max-width: 800px) {
+  .break:nth-child(1) {
+    height: 100px;
+  }
   section.hero {
     min-height: 100vh;
     display: -webkit-box;

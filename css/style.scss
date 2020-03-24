@@ -26,6 +26,7 @@ html {
   font-family: JosefinSans;
   font-size: 10px;
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   width: 100vw;
@@ -35,32 +36,6 @@ body {
 a {
   text-decoration: none;
   color: black;
-
-    font-size: 2rem;
-    position: relative;
-    height: 48px;
-    padding:0 2rem;
-    width: fit-content;
-    color: black;
-    &:before{
-      content: '';
-      width: 48px;;
-      height: 48px;
-      position: absolute;
-      top: -75%;
-      left: 0;
-      border-radius: 50%;
-      opacity: 0.5;
-      background-color: #3D5AF1;
-      transition: all 0.2s;
-    }
-    &:hover{
-      &:before{
-        width: 100%;
-        border-radius: 24px;
-      }
-    }
-  
 }
 button{
   width: fit-content;
@@ -68,12 +43,13 @@ button{
   background: #3D5AF1;
   border: none;
   color: white;
-  padding: 0 3rem;
+  padding: 1.5rem 3rem;
   font-weight: bold;
   border-radius: 4px;
   font-size:2rem;
   font-weight: bold;
   cursor: pointer;
+  font-family: JosefinSans;
 }
 ul {
   list-style: none;
@@ -81,31 +57,36 @@ ul {
 p{
   max-width: 500px;
 }
+.break{
+  height: 72px;
+}
 header {
   z-index: 999;
-  padding: 2rem 1rem;
-  width: calc(100% - 2.4rem);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  color: white;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  .nav 
+  {
+    height: 64px;
+    width: 90%;
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  a.logo {  
+    a.logo {  
     font-weight: bold;
     font-size: 1.4rem;
-    color: white;
-  }
-
-  .nav {
+    }
     &__links {
       display: flex;
     }
 
     &__link {
       padding: 1rem;
-      font-size: 1rem;
-      color: white;
+      font-size: 2.4rem;
+      font-weight: 500;
     }
   }
 }
@@ -113,7 +94,6 @@ section{
   margin: 0 auto 6.4rem;
   width: 90%;
   max-width:1140px;
-
   &.hero{
     min-height: 100vh;
     display: flex;
@@ -281,6 +261,31 @@ footer{
     margin:2rem;
     a{
       margin-top: 2rem;
+
+    font-size: 2rem;
+    position: relative;
+    height: 48px;
+    padding:0 2rem;
+    width: fit-content;
+    color: black;
+    &:before{
+      content: '';
+      width: 48px;;
+      height: 48px;
+      position: absolute;
+      top: -75%;
+      left: 0;
+      border-radius: 50%;
+      opacity: 0.5;
+      background-color: #3D5AF1;
+      transition: all 0.2s;
+    }
+    &:hover{
+      &:before{
+        width: 100%;
+        border-radius: 24px;
+      }
+    }
     }
   }
 }
@@ -299,6 +304,9 @@ footer{
   }
 }
 @media screen and(max-width:800px){
+  .break:nth-child(1){
+    height: 100px;;
+  }
   section{    
       &.hero{
         min-height: 100vh;
