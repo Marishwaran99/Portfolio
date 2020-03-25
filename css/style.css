@@ -84,7 +84,10 @@ header .nav {
 
 header .nav a.logo {
   font-weight: bold;
-  font-size: 1.4rem;
+}
+
+header .nav a.logo h1 {
+  font-size: 3rem;
 }
 
 header .nav__links {
@@ -93,9 +96,23 @@ header .nav__links {
   display: flex;
 }
 
+header .nav__item {
+  margin: 1.4rem;
+}
+
+header .nav .underline {
+  width: 0%;
+  height: 4px;
+  margin-right: auto;
+  background-color: black;
+}
+
+header .nav .nav__link:hover + .underline, header .nav .underline.active {
+  width: calc(100%);
+}
+
 header .nav__link {
-  padding: 1rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -176,6 +193,7 @@ footer div {
 .text--header {
   font-size: 4.8rem;
   line-height: 120%;
+  z-index: 999;
 }
 
 .text--header span {
@@ -737,6 +755,7 @@ footer div {
 .card img {
   width: 100%;
   margin-bottom: 2rem;
+  height: 25rem;
 }
 
 .card-body {
@@ -774,6 +793,10 @@ footer div {
   border-radius: 24px;
 }
 
+.break:nth-child(1) {
+  height: 64px;
+}
+
 @media screen and (max-width: 375px) {
   html {
     font-size: 8px;
@@ -788,7 +811,7 @@ footer div {
 
 @media screen and (max-width: 800px) {
   .break:nth-child(1) {
-    height: 100px;
+    height: 80px;
   }
   section.hero {
     min-height: 100vh;
