@@ -120,7 +120,7 @@ header {
       font-weight: 500;
       display: inline-block;
       position: relative;
-
+      line-height: 64px;
     
       &:before{
         content: '';
@@ -128,7 +128,7 @@ header {
         width: 0%;
         height: 6px;
         background-color: $color-secondary;
-        bottom: -8px;
+        bottom: 0px;
 
       }
       &:hover:before{
@@ -354,6 +354,7 @@ footer{
   border-radius: 4px;
   max-width: 600px;
   img{
+    background-color: white;
     width: 100%;
     min-height: 25rem;
     margin-bottom: 2rem;
