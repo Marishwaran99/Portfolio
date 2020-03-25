@@ -13,7 +13,7 @@ for (let i = 0; i < nav_link_list.length; i++) {
 }
 document.addEventListener('scroll', function() {
 	if (window.pageYOffset > 300) {
-		header.style.boxShadow = '2px 2px #ccc';
+		header.style.boxShadow = '2px 2px #eee';
 	} else {
 		header.style.boxShadow = 'none';
 	}

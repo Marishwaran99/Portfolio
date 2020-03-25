@@ -2,6 +2,8 @@
   src: url("../JosefinSans.ttf");
   font-family: JosefinSans;
 }
+$color-primary:#86f3b8;
+$color-secondary:#03c1eb;
 
 $marginPaddingPix: (
   "0": 0,
@@ -40,9 +42,8 @@ a {
 button{
   width: fit-content;
   height: 48px;
-  background: #3D5AF1;
+  background: $color-primary;
   border: none;
-  color: white;
   padding: 1.5rem 3rem;
   font-weight: bold;
   border-radius: 4px;
@@ -59,6 +60,20 @@ p{
 }
 .break{
   height: 72px;
+}
+
+.loading-screen{
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eeeeee;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;display: none;
 }
 header {
   z-index: 999;
@@ -90,8 +105,8 @@ header {
     }
     .underline{
       width: 0%;
-      height: 4px;margin-right: auto;
-      background-color: black;
+      height: 8px;margin-right: auto;
+      background-color: $color-primary;
     }
     .nav__link:hover + .underline, .underline.active{
   
@@ -105,7 +120,7 @@ header {
   }
 }
 section{
-  margin: 0 auto 6.4rem;
+  margin: 0 auto;
   width: 90%;
   max-width:1140px;
   &.hero{
@@ -148,28 +163,41 @@ section{
   }
 }
 footer{
-  background-color: #3D5AF1;
+  background-color: $color-primary;
   padding: 2rem 0;
   div{
     
     margin: auto;
   width: 90%;
   max-width:1140px;
-  color: white;
   }  
 }
 .text--header{
   font-size: 4.8rem;
   line-height: 120%;
   z-index: 999;
+
+
+}
+.text--loading{
+  font-size: 2rem;
+  color: #777777;
   span{
-    display: block;
-      
+    display: inline-block;
   }
+}
+.bg-loading{
+  background-color: $color-primary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 .text--sub-header{
   font-size: 2.4rem;
-  opacity: 0.7;
+  color: gray;
 }
 .text--body{
   font-size: 1.6rem;
@@ -189,6 +217,21 @@ footer{
 .text--caption{
   font-size: 1.6rem;
   font-weight: bold;
+}
+.text-underline--primary{
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  &:before{
+
+    content: '';
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    bottom: 5%;
+    background-color: $color-primary;
+    height: 2.4rem;
+  }
 }
 //flex-property------------------------------
 .d-flex{
@@ -268,43 +311,47 @@ footer{
 .card{
   background-color: #f8f8f8;
   border-radius: 4px;
+  max-width: 600px;
   img{
     width: 100%;
     margin-bottom: 2rem;
-    height: 25rem;
+    max-height: 30rem;
   }
   &-body{
     margin:2rem;
-    a{
-      margin-top: 2rem;
-
-    font-size: 2rem;
-    position: relative;
-    height: 48px;
-    padding:0 2rem;
-    width: fit-content;
-    color: black;
-    &:before{
-      content: '';
-      width: 48px;;
-      height: 48px;
-      position: absolute;
-      top: -75%;
-      left: 0;
-      border-radius: 50%;
-      opacity: 0.5;
-      background-color: #3D5AF1;
-      transition: all 0.2s;
-    }
-    &:hover{
-      &:before{
-        width: 100%;
-        border-radius: 24px;
-      }
-    }
-    }
   }
 }
+
+.circle-btn{
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  transform: translateX(20px);
+  z-index: 1;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  text-transform: capitalize;
+
+  &::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -15px;
+    z-index: -1;
+    left: -20px;  
+    border-radius: 20px;  
+    background-color: $color-primary;
+    transition:all 0.3s;
+  }
+
+  &:hover:before{
+    
+    width: calc(100% + 40px);
+  }
+}
+
 .break:nth-child(1){
   height: 64px;
 }

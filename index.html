@@ -10,6 +10,17 @@
 </head>
 
 <body>
+
+  <div class="loading-screen">
+    <div class="text--loading">
+      <span>Website</span>
+      <span>Is</span>
+      <span>Cooking</span>
+    </div>
+    <div class="bg-loading">
+
+    </div>
+  </div>
   <header>
 
     <nav class="nav">
@@ -38,14 +49,15 @@
     </nav>
   </header>
 
-  <main>
+  <main class="active">
     <div class="break" id="home"></div>
     <section class="hero">
       <div class="hero__wrapper">
         <div class="hero__wrapper--1">
-          <h2 class="text--header">Front End <br><span>Developer.</span></h2>
-          <p class="text--sub-header">
-            I design and build responsive websites with clean UI.
+          <h2 class="text--header"><span class="text-underline--primary">Front</span> End <br><span
+              class="text-underline--primary">Developer.</span class="text-underline--primary"></h2>
+          <p class="text--sub-header mt-2">
+            I design and build responsive websites with clean UI.;
           </p>
           <button class="mt-4">See My Work</button>
         </div>
@@ -108,23 +120,30 @@
                 similique harum pariatur dolores ratione, dolorum, sunt officiis, possimus iste asperiores aliquid non
                 explicabo soluta voluptate minus error!</p>
               <div class="mt-4">
-                <a href="#">Visit Website</a></div>
+                <a class="circle-btn" href="#">
+                  View Website
+                </a>
+              </div>
             </div>
           </div>
           <div class="card d-flex flex-col">
             <img src="./images/screenshot1.png" alt="">
             <div class="card-body">
               <h4 class="text--headline">Work2</h4>
-              <p class="text--body mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laudantium ipsa
+              <p class="text--body mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laudantium
+                ipsa
                 ut
-                similique harum pariatur dolores ratione, dolorum, sunt officiis, possimus iste asperiores aliquid non
+                similique harum pariatur dolores ratione, dolorum, sunt officiis, possimus iste asperiores aliquid
+                non
                 explicabo soluta voluptate minus error!</p>
               <div class="mt-4">
-                <a href="#">Download APK</a></div>
+                <a class="circle-btn" href="#">
+                  Download APK
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
     <div class="break" id="contact"></div>
 
@@ -147,6 +166,7 @@
       </div>
     </section>
   </main>
+  <div class="break"></div>
   <footer>
     <div class="d-flex jcsb">
       <h4 class="text--caption">&copy; Marish 2020</h4>
@@ -155,9 +175,9 @@
   </footer>
 
 
-  <script type="text/javascript" src="./main.js">
-
-
+  <script type="text/javascript" src="./main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <script>
   </script>
 </body>
 
