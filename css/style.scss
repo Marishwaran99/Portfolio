@@ -3,7 +3,7 @@
   font-family: JosefinSans;
 }
 $color-primary:#86f3b8;
-$color-secondary:#03c1eb;
+$color-secondary:#fdaed8;
 
 $marginPaddingPix: (
   "0": 0,
@@ -120,9 +120,11 @@ header {
   }
 }
 section{
+  .container{
   margin: 0 auto;
   width: 90%;
   max-width:1140px;
+  }
   &.hero{
     min-height: 100vh;
     display: flex;
@@ -155,6 +157,7 @@ section{
     }
   }
   &.contact{
+    background-color: $color-secondary;
     .contact__wrapper{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -163,7 +166,7 @@ section{
   }
 }
 footer{
-  background-color: $color-primary;
+  background-color: $color-secondary;
   padding: 2rem 0;
   div{
     
@@ -229,7 +232,7 @@ footer{
     z-index: -1;
     position: absolute;
     bottom: 5%;
-    background-color: $color-primary;
+    background-color: $color-secondary;
     height: 2.4rem;
   }
 }

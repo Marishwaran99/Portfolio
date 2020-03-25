@@ -135,7 +135,7 @@ header .nav__link {
   font-weight: 500;
 }
 
-section {
+section .container {
   margin: 0 auto;
   width: 90%;
   max-width: 1140px;
@@ -189,6 +189,10 @@ section.work .work__wrapper {
   grid-gap: 4rem 4rem;
 }
 
+section.contact {
+  background-color: #fdaed8;
+}
+
 section.contact .contact__wrapper {
   display: -ms-grid;
   display: grid;
@@ -198,7 +202,7 @@ section.contact .contact__wrapper {
 }
 
 footer {
-  background-color: #86f3b8;
+  background-color: #fdaed8;
   padding: 2rem 0;
 }
 
@@ -274,7 +278,7 @@ footer div {
   z-index: -1;
   position: absolute;
   bottom: 5%;
-  background-color: #86f3b8;
+  background-color: #fdaed8;
   height: 2.4rem;
 }
 
