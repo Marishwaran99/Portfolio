@@ -88,12 +88,15 @@ header {
     margin: auto;
     display: flex;
     align-items: center;
+
     justify-content: space-between;
 
-    a.logo {  
+    a.logo { 
+      margin-top: 8px; 
     font-weight: bold;
     h1{
       font-size: 3rem;
+      line-height: 3rem;
     }
     }
     &__links {
@@ -106,14 +109,14 @@ header {
     .underline{
       width: 0%;
       height: 8px;margin-right: auto;
-      background-color: $color-primary;
+      background-color: $color-secondary;
     }
     .nav__link:hover + .underline, .underline.active{
   
     width: calc(100%);
     }
     &__link {
-
+      padding-top: 8px;
       font-size: 2rem;
       font-weight: 500;
     }
@@ -150,6 +153,7 @@ section{
   }
 
   &.work{
+    background-color: #fcfcfc;
     .work__wrapper{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -157,7 +161,7 @@ section{
     }
   }
   &.contact{
-    background-color: $color-secondary;
+    min-height: calc(400px);
     .contact__wrapper{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -166,6 +170,7 @@ section{
   }
 }
 footer{
+
   background-color: $color-secondary;
   padding: 2rem 0;
   div{
@@ -173,11 +178,12 @@ footer{
     margin: auto;
   width: 90%;
   max-width:1140px;
+  
   }  
 }
 .text--header{
   font-size: 4.8rem;
-  line-height: 120%;
+  line-height: 130%;
   z-index: 999;
 
 
@@ -204,11 +210,15 @@ footer{
 }
 .text--body{
   font-size: 1.6rem;
+  line-height: 150%;
+  opacity: 0.7;;
+  letter-spacing: 0.05rem;
 }
 .text--title-1{
   font-size: 3.2rem;
   font-weight: 500;
   margin-bottom: 4rem;;
+  margin-top: 2rem;
 }
 .text--title-2{
   font-size: 2.4rem;
@@ -216,10 +226,14 @@ footer{
 }
 .text--headline{
   font-size: 2rem;
+  letter-spacing: 1px;
+  color: #222222;;
+
 }
 .text--caption{
   font-size: 1.6rem;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 .text-underline--primary{
   display: inline-block;
@@ -312,11 +326,12 @@ footer{
 //card-property------------------------------
 
 .card{
-  background-color: #f8f8f8;
+
   border-radius: 4px;
   max-width: 600px;
   img{
     width: 100%;
+    min-height: 25rem;
     margin-bottom: 2rem;
     max-height: 30rem;
   }
@@ -390,6 +405,8 @@ footer{
         }
       }
       &.work{
+        
+
         .work__wrapper{
           display: grid;
           grid-template-columns: repeat(1, 1fr);
@@ -397,6 +414,7 @@ footer{
         }
       }
       &.contact{
+        min-height: calc(100vh - 100px);
         .contact__wrapper{
           display: grid;
           grid-template-columns: repeat(1, 1fr);
