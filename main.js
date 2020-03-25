@@ -1,14 +1,12 @@
-var underline_list = document.querySelectorAll('.underline');
 var nav_link_list = document.querySelectorAll('.nav__link');
 var header = document.querySelector('header');
 var home_section = document.querySelector('#home');
 var work_section = document.querySelector('#work');
 var contact_section = document.querySelector('#contact');
-console.log(underline_list.length);
 for (let i = 0; i < nav_link_list.length; i++) {
 	nav_link_list[i].addEventListener('click', function() {
 		removeActive();
-		underline_list[i].classList.add('active');
+		nav_link_list[i].classList.add('active');
 	});
 }
 document.addEventListener('scroll', function() {
@@ -20,8 +18,7 @@ document.addEventListener('scroll', function() {
 });
 
 function removeActive() {
-	for (let j = 0; j < underline_list.length; j++) {
-		console.log('heli');
-		underline_list[j].classList.remove('active');
+	for (let j = 0; j < nav_link_list.length; j++) {
+		nav_link_list[j].classList.remove('active');
 	}
 }

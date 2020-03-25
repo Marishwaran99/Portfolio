@@ -16,7 +16,7 @@ $marginPaddingPix: (
   "auto": auto
 );
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   outline: none;
@@ -24,6 +24,7 @@ $marginPaddingPix: (
   line-height: 120%;
   transition: all 0.3s;
 }
+
 html {
   font-family: JosefinSans;
   font-size: 10px;
@@ -92,7 +93,6 @@ header {
     justify-content: space-between;
 
     a.logo { 
-      margin-top: 8px; 
     font-weight: bold;
     h1{
       font-size: 3rem;
@@ -116,9 +116,33 @@ header {
     width: calc(100%);
     }
     &__link {
-      padding-top: 8px;
       font-size: 2rem;
       font-weight: 500;
+      display: inline-block;
+      position: relative;
+
+    
+      &:before{
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 6px;
+        background-color: $color-secondary;
+        bottom: -8px;
+
+      }
+      &:hover:before{
+
+        width: 100%;
+
+      }
+      &.active{
+        &:before{
+
+          width: 100%;
+  
+        }
+      }
     }
   }
 }
@@ -153,7 +177,7 @@ section{
   }
 
   &.work{
-    background-color: #fcfcfc;
+    background-color: #fafafa;
     .work__wrapper{
       display: grid;
       grid-template-columns: repeat(2, 1fr);

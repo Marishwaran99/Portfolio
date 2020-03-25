@@ -3,7 +3,7 @@
   font-family: JosefinSans;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   outline: none;
@@ -102,7 +102,6 @@ header .nav {
 }
 
 header .nav a.logo {
-  margin-top: 8px;
   font-weight: bold;
 }
 
@@ -133,9 +132,27 @@ header .nav .nav__link:hover + .underline, header .nav .underline.active {
 }
 
 header .nav__link {
-  padding-top: 8px;
   font-size: 2rem;
   font-weight: 500;
+  display: inline-block;
+  position: relative;
+}
+
+header .nav__link:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 6px;
+  background-color: #fdaed8;
+  bottom: -8px;
+}
+
+header .nav__link:hover:before {
+  width: 100%;
+}
+
+header .nav__link.active:before {
+  width: 100%;
 }
 
 section .container {
@@ -185,7 +202,7 @@ section.hero .hero__wrapper--2-content {
 }
 
 section.work {
-  background-color: #fcfcfc;
+  background-color: #fafafa;
 }
 
 section.work .work__wrapper {
