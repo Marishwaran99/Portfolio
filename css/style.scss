@@ -14,7 +14,7 @@ $color-secondary:#fdaed8;
   margin: 0;
   padding: 0;
   outline: none;
-  letter-spacing: 5%;
+  border: none;
   line-height: 120%;
   transition: all 0.3s;
 }
@@ -174,9 +174,9 @@ section{
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 4rem;
       img{
-        margin-right: 2rem;
+        margin-right: 4rem;
         width: 3.6rem;
-        margin-top: 1rem;;
+        margin-top: 2rem;;
       }
     }
     }
@@ -211,6 +211,9 @@ section{
     background-color: $color-secondary;
     height: 50%;
   }
+  &:hover:before{
+    height: 100%;
+  }
 }
 .text-highlight-green{
   display: inline-block;
@@ -226,6 +229,9 @@ section{
     background-color: $color-primary;
     height: 50%;
   }
+  &:hover:before{
+    height: 100%;
+  }
 }
 .programming-card{
   display: flex;
@@ -237,12 +243,45 @@ section{
 .project-card{
   max-width: 500px;
   img{
-    min-height: 25rem;
-    max-height: 30rem;
-    width: 100%;
-    background-color: gray;
+    height: 25rem;
+    max-width: 100%;
+    background-color: #eeeeee;
 
   }
+}
+
+
+.circle-btn{
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  transform: translateX(20px);
+  z-index: 1;
+  font-size: 1.6rem;
+  line-height:42px;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  color: black;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    left: -20px;  
+    border-radius: 20px;  
+    background-color: $color-primary;
+    transition:all 0.3s;
+  }
+
+  &:hover:before{
+    
+    width: calc(100% + 40px);
+  }
+}
+
+.break:nth-child(1){
+  height: 64px;
 }
 
 ////////////////typography////////////////
@@ -255,7 +294,7 @@ section{
 .hero__title-text
 { 
   font-size: 4.8rem;
-  line-height: 130%;
+  line-height: 150%;
   z-index: 999;
 }
 .hero__subtitle-text{
@@ -274,8 +313,8 @@ section{
 }
 
 .section-title{
-  font-size: 2.4rem;
-  margin: 2rem 0;
+  font-size: 2.8rem;
+  margin: 2rem 0 4rem;
 }
 
 .project-card__title-text{
@@ -292,7 +331,7 @@ section{
   font-weight: 500;
 }
 .contact-card__body-text{
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1.8rem;
   color: #222222;
 }
@@ -323,39 +362,6 @@ section{
   overflow: hidden;
 }
 
-.circle-btn{
-  height: 40px;
-  position: relative;
-  display: inline-block;
-  transform: translateX(20px);
-  z-index: 1;
-  font-size: 1.6rem;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  text-transform: capitalize;
-
-  &::before{
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: -15px;
-    z-index: -1;
-    left: -20px;  
-    border-radius: 20px;  
-    background-color: $color-primary;
-    transition:all 0.3s;
-  }
-
-  &:hover:before{
-    
-    width: calc(100% + 40px);
-  }
-}
-
-.break:nth-child(1){
-  height: 64px;
-}
 
 @media screen and(max-width:375px){
   html{
