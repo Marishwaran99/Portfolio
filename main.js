@@ -1,4 +1,4 @@
-var nav_link_list = document.querySelectorAll('.nav__link');
+var nav_link_list = document.querySelectorAll('.navbar__link');
 var header = document.querySelector('header');
 var home_section = document.querySelector('#home');
 var work_section = document.querySelector('#work');
