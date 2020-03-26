@@ -425,9 +425,6 @@ section.contact-section .contact__wrapper-container img {
   html {
     font-size: 8px;
   }
-  .contact-section .contact__wrapper-container img {
-    width: 2.4rem;
-  }
 }
 
 @media screen and (max-width: 320px) {
@@ -470,15 +467,12 @@ section.contact-section .contact__wrapper-container img {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
-  section.contact {
-    min-height: calc(100vh - 100px);
-  }
-  section.contact .contact__wrapper {
-    display: -ms-grid;
-    display: grid;
+  section.contact-section .contact__wrapper-container {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    grid-gap: 4rem;
+  }
+  section.contact-section .contact__wrapper-container img {
+    width: 2.4rem;
   }
 }
 
