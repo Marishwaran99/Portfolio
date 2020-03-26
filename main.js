@@ -9,9 +9,8 @@ var loading_screen_text = document.querySelectorAll('.loading-screen__title-text
 var colorsList = [
 	'#86f3b8',
 	'#fdaed8',
-	'#7c73e6',
-	'#eb5e60',
-	'#7899dc'
+	'#8bdeff',
+	'#fabc60'
 ];
 var selectedColor;
 for (let i = 0; i < nav_link_list.length; i++) {

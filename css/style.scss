@@ -9,7 +9,7 @@
 $color-green:#86f3b8;
 $color-pink:#fdaed8;
 $color-blue:#8bdeff;
-
+$color-orange:#fabc60;
 //base////////////////////////////////////////
 *, *::before, *::after {
   margin: 0;
@@ -91,7 +91,7 @@ header {
         position: absolute;
         width: 0%;
         height: 6px;
-        background-color: #fabc60;
+        background-color: $color-orange;
         bottom: 0px;
 
       }
