@@ -60,26 +60,6 @@ p {
   height: 64px;
 }
 
-.loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #eeeeee;
-  z-index: 9999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: none;
-}
-
 header {
   z-index: 9999;
   width: 100%;
@@ -418,14 +398,119 @@ section.contact-section .contact__wrapper-container img {
   font-size: 2rem;
 }
 
-.bg-loading {
-  background-color: #86f3b8;
+.hero__button:hover {
+  background: #29ea82;
+}
+
+.loading-screen {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #eeeeee;
+  z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loading-screen.hide {
+  height: 0;
+}
+
+.loading-screen__title {
+  font-size: 3.2rem;
+  z-index: 2;
+}
+
+.loading-screen__background {
+  position: fixed;
+  top: 150vh;
+  left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 999;
   overflow: hidden;
+}
+
+.loading-screen__background.fade-up {
+  -webkit-animation: fadeUpBackground 1.4s ease-in 0s 1 forwards;
+          animation: fadeUpBackground 1.4s ease-in 0s 1 forwards;
+}
+
+.loading-screen__title-text {
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  pointer-events: none;
+  color: black;
+}
+
+.loading-text-fadeUp {
+  opacity: 0;
+  -webkit-animation: load 1.5s ease-out 0s infinite forwards;
+          animation: load 1.5s ease-out 0s infinite forwards;
+}
+
+.loading-text-fadeUp:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.loading-text-fadeUp:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+@-webkit-keyframes load {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+@keyframes load {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+@-webkit-keyframes fadeUpBackground {
+  from {
+    top: 150vh;
+  }
+  to {
+    top: -150vh;
+  }
+}
+
+@keyframes fadeUpBackground {
+  from {
+    top: 150vh;
+  }
+  to {
+    top: -150vh;
+  }
 }
 
 @media screen and (max-width: 375px) {
