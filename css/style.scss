@@ -6,8 +6,9 @@
   src: url("../WorkSans.ttf");
   font-family: WorkSans;
 }
-$color-primary:#86f3b8;
-$color-secondary:#fdaed8;
+$color-green:#86f3b8;
+$color-pink:#fdaed8;
+$color-blue:#8bdeff;
 
 //base////////////////////////////////////////
 *, *::before, *::after {
@@ -39,6 +40,7 @@ button{
   border: none;
   background: none;
   font-family: JosefinSans;
+  transition: all 0.25s;
 }
 ul {
   list-style: none;
@@ -89,7 +91,7 @@ header {
         position: absolute;
         width: 0%;
         height: 6px;
-        background-color: $color-secondary;
+        background-color: #fabc60;
         bottom: 0px;
 
       }
@@ -171,7 +173,7 @@ section{
 ///////////////component///////////////
 
 .footer{
-  background-color: $color-secondary;
+  background-color: $color-blue;
   padding: 2rem 0;
   &__wrapper{
     display: flex;
@@ -195,7 +197,7 @@ section{
     z-index: -1;
     position: absolute;
     bottom: 0;
-    background-color: $color-secondary;
+    background-color: $color-pink;
     height: 50%;
   }
   &:hover:before{
@@ -213,7 +215,25 @@ section{
     z-index: -1;
     position: absolute;
     bottom: 0;
-    background-color: $color-primary;
+    background-color: $color-green;
+    height: 50%;
+  }
+  &:hover:before{
+    height: 100%;
+  }
+}
+.text-highlight-blue{
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  &:before{
+
+    content: '';
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    background-color: $color-blue;
     height: 50%;
   }
   &:hover:before{
@@ -257,7 +277,7 @@ section{
     z-index: -1;
     left: -20px;  
     border-radius: 20px;  
-    background-color: $color-primary;
+    background-color: $color-blue;
     transition:all 0.3s;
   }
 
@@ -332,13 +352,13 @@ section{
   margin-top: 4rem;
   width: fit-content;
   height: 48px;
-  background: $color-primary;
+  background: $color-green;
   padding: 1.5rem 3rem;
   font-weight: bold;
   border-radius: 4px;
   font-size:2rem;
   &:hover{
-    background: darken($color: $color-primary, $amount: 20);
+    background: darken($color: $color-green, $amount: 20);
   }
 }
 /////loading////////////////////////
@@ -359,7 +379,8 @@ section{
     height: 0;
   }
   &__title{
-    font-size: 3.2rem;
+    font-size: 2.8rem;
+    font-weight: 100;
     z-index: 2;
   }
   &__background{
@@ -368,7 +389,7 @@ section{
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index:999;
+    z-index:10000;
     overflow: hidden;
     
     &.fade-up{
