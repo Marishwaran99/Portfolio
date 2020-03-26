@@ -23,77 +23,83 @@
   </div>
   <header>
 
-    <nav class="nav">
-      <a href="#home" class="logo">
-        <h1>Marish</h1>
+    <nav class="navbar">
+      <a href="#home" class="navbar-logo">
+        <h1 class="navbar-logo-text">Marish</h1>
       </a>
-      <ul class="nav__links">
-        <li class="nav__item"><a href="#home" class="nav__link active">Home
+      <ul class="navbar__links">
+        <li class="navbar__item"><a href="#home" class="navbar__link active">Home
 
           </a>
         </li>
-        <li class="nav__item"><a href="#work" class="nav__link">Work
+        <li class="navbar__item"><a href="#work" class="navbar__link">Work
           </a>
         </li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Contact
+        <li class="navbar__item"><a href="#contact" class="navbar__link">Contact
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="active">
+  <main>
     <div class="break" id="home"></div>
-    <section class="hero">
+    <section class="hero-section">
       <div class="container">
         <div class="hero__wrapper">
-          <div class="hero__wrapper--1">
-            <h2 class="text--header"><span class="text-underline--primary">Front</span> End <br><span
-                class="text-underline--primary">Developer.</span class="text-underline--primary"></h2>
-            <p class="text--sub-header mt-2">
-              I design and build responsive websites with clean UI.;
+          <div class="hero__wrapper--left">
+            <h2 class="hero__title-text">
+              <span class="text-highlight-pink">Front</span> End <br>
+              <span class="text-highlight-pink">Developer.
+              </span>
+            </h2>
+            <p class="hero__subtitle-text">
+              I design and build responsive websites with clean UI.
             </p>
-            <button class="mt-4">See My Work</button>
+            <button class="hero__button">See My Work</button>
           </div>
 
-          <div class="hero__wrapper--2">
-            <h4 class="text--headline mb-4">Things I know</h4>
-            <div class="hero__wrapper--2-content">
-              <div class="d-flex aic">
-                <img src="./images/html.png" alt="">
-                <h4 class="text--title-2 ml-sm">
+          <div class="hero__wrapper--right">
+            <h4 class="hero__wrapper--right-title-text">
+              <span class="text-highlight-green">
+                Things I know</span>
+            </h4>
+            <div class="hero__wrapper--right-container">
+              <div class="programming-card">
+                <img src="./images/html.png" alt="HTML">
+                <h5 class="programming-card__title">
                   HTML
-                </h4>
+                </h5>
               </div>
-              <div class="d-flex aic">
-                <img src="./images/css.png" alt="">
-                <h4 class="text--title-2 ml-sm">
+              <div class="programming-card">
+                <img src="./images/css.png" alt="CSS">
+                <h5 class="programming-card__title">
                   CSS
-                </h4>
+                </h5>
               </div>
-              <div class="d-flex aic">
-                <img src="./images/js.png" alt="">
-                <h4 class="text--title-2 ml-sm">
-                  Javascript
-                </h4>
+              <div class="programming-card">
+                <img src="./images/js.png" alt="JS">
+                <h5 class="programming-card__title">
+                  JavaScript
+                </h5>
               </div>
-              <div class="d-flex aic">
-                <img src="./images/bootstrap.png" alt="">
-                <h4 class="text--title-2 ml-sm">
+              <div class="programming-card">
+                <img src="./images/bootstrap.png" alt="Bootstrap">
+                <h5 class="programming-card__title">
                   Bootstrap
-                </h4>
+                </h5>
               </div>
-              <div class="d-flex aic">
-                <img src="./images/react.png" alt="">
-                <h4 class="text--title-2 ml-sm">
+              <div class="programming-card">
+                <img src="./images/react.png" alt="React JS">
+                <h5 class="programming-card__title">
                   React JS
-                </h4>
+                </h5>
               </div>
-              <div class="d-flex aic">
-                <img src="./images/flutter.png" alt="">
-                <h4 class="text--title-2 ml-sm">
+              <div class="programming-card">
+                <img src="./images/flutter.png" alt="Flutter">
+                <h5 class="programming-card__title">
                   Flutter
-                </h4>
+                </h5>
               </div>
             </div>
           </div>
@@ -102,46 +108,48 @@
     </section>
 
 
-    <section class="work">
+    <section class="work-section">
       <div class="break" id="work"></div>
       <div class="container">
-        <div class="d-flex flex-col">
-          <h2 class="text--title-1">My Work</h2>
+        <div class="work__wrapper">
+          <h2 class="section-title">My Work</h2>
 
-          <div class=" work__wrapper">
-            <div class="card d-flex flex-col">
+          <div class="work__wrapper-container">
+            <div class="project-card">
               <img src="./images/screenshot1.png" alt="ss1">
-              <div class="card-body">
-                <h4 class="text--headline">MLearn</h4>
-                <p class="text--body mt-2">React JS web application to learn web programming languages.
+              <div class="pproject-card__body">
+                <h4 class="project-card__title-text">MLearn</h4>
+                <p class="project-card__body-text">React JS web application to learn web programming languages.
                 </p>
-                <div class="mt-4">
+                <div class="project-card__button">
                   <a class="circle-btn" href="#">
                     View Website
                   </a>
                 </div>
               </div>
             </div>
-            <div class="card d-flex flex-col">
-              <img src="./images/make_my_day.svg" alt="ss2">
-              <div class="card-body">
-                <h4 class="text--headline">Make My Day</h4>
-                <p class="text--body mt-2">Flutter application to manage daily routines.</p>
-                <div class="mt-4">
+            <div class="project-card">
+              <img src="./images/make_my_day.svg" alt="ss1">
+              <div class="pproject-card__body">
+                <h4 class="project-card__title-text">Make My Day</h4>
+                <p class="project-card__body-text">Flutter Application for managing daily routines.
+                </p>
+                <div class="project-card__button">
                   <a class="circle-btn" href="#">
                     Download APK
                   </a>
                 </div>
               </div>
             </div>
-            <div class="card d-flex flex-col">
-              <img src="./images/iron-man.svg" alt="ss3">
-              <div class="card-body">
-                <h4 class="text--headline">Iron Man</h4>
-                <p class="text--body mt-2">An Illustration.</p>
-                <div class="mt-4">
-                  <a class="circle-btn" href="#" download="">
-                    Download Illustration
+            <div class="project-card">
+              <img src="./images/iron-man.svg" alt="ss1">
+              <div class="pproject-card__body">
+                <h4 class="project-card__title-text">MLearn</h4>
+                <p class="project-card__body-text">React JS web application to learn web programming languages.
+                </p>
+                <div class="project-card__button">
+                  <a class="circle-btn" href="#">
+                    View Website
                   </a>
                 </div>
               </div>
@@ -152,19 +160,19 @@
       <div class="break"></div>
     </section>
 
-    <section class="contact">
+    <section class="contact-section">
       <div class="break" id="contact"></div>
       <div class="container">
-        <div class="d-flex flex-col">
-          <h2 class="text--title-1">Contact</h2>
-          <div class="contact__wrapper">
-            <div class="d-flex flex-col">
-              <h4 class="text--title-2 mb-2">Email Address</h4>
-              <p class="text--headline">marishwaran22@gmail.com</p>
+        <div class="contact__wrapper">
+          <h2 class="section-title">Contact</h2>
+          <div class="contact__wrapper-container">
+            <div class="contact-card">
+              <h4 class="contact-card__title-text">Email Address</h4>
+              <p class="contact-card__body-text">marishwaran22@gmail.com</p>
             </div>
-            <div class="d-flex flex-col">
-              <h4 class="text--title-2 mb-2">Follow me at</h4>
-              <div class="d-flex">
+            <div class="contact-card">
+              <h4 class="contact-card__title-text">Follow me at</h4>
+              <div class="social-icon__container">
                 <img src="./images/instagram.svg" alt="instagram">
                 <img src="./images/twitter.svg" class="ml-2" alt="twitter">
               </div>
@@ -176,10 +184,12 @@
     </section>
   </main>
 
-  <footer>
-    <div class="d-flex jcsb">
-      <h4 class="text--caption">&copy; Marish 2020</h4>
-      <h4 class="text--caption">Icons by icons8.com</h4>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <h4 class="footer-text">&copy; Marish 2020</h4>
+        <h4 class="footer-text">Icons by icons8.com</h4>
+      </div>
     </div>
   </footer>
 
