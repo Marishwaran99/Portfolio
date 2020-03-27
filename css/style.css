@@ -108,7 +108,7 @@ header .navbar__link:before {
   position: absolute;
   width: 0%;
   height: 6px;
-  background-color: #fabc60;
+  background-color: #86f3b8;
   bottom: 0px;
 }
 
@@ -230,33 +230,35 @@ section.contact-section .contact__wrapper-container img {
   display: flex;
 }
 
-.text-highlight-pink {
+.text-highlight--pink {
+  line-height: 130%;
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.text-highlight-pink:before {
+.text-highlight--pink:before {
   content: '';
   width: 100%;
   z-index: -1;
   position: absolute;
   bottom: 0;
   background-color: #fdaed8;
-  height: 50%;
+  height: 40%;
 }
 
-.text-highlight-pink:hover:before {
+.text-highlight--pink:hover:before {
   height: 100%;
 }
 
-.text-highlight-green {
+.text-highlight--green {
   display: inline-block;
   position: relative;
   z-index: 2;
+  line-height: 130%;
 }
 
-.text-highlight-green:before {
+.text-highlight--green:before {
   content: '';
   width: 100%;
   z-index: -1;
@@ -266,17 +268,18 @@ section.contact-section .contact__wrapper-container img {
   height: 50%;
 }
 
-.text-highlight-green:hover:before {
+.text-highlight--green:hover:before {
   height: 100%;
 }
 
-.text-highlight-blue {
+.text-highlight--blue {
+  line-height: 130%;
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-.text-highlight-blue:before {
+.text-highlight--blue:before {
   content: '';
   width: 100%;
   z-index: -1;
@@ -286,7 +289,7 @@ section.contact-section .contact__wrapper-container img {
   height: 50%;
 }
 
-.text-highlight-blue:hover:before {
+.text-highlight--blue:hover:before {
   height: 100%;
 }
 
@@ -321,6 +324,7 @@ section.contact-section .contact__wrapper-container img {
           transform: translateX(20px);
   z-index: 1;
   font-size: 1.6rem;
+  font-weight: bold;
   line-height: 42px;
   font-weight: 500;
   letter-spacing: 0.05rem;
